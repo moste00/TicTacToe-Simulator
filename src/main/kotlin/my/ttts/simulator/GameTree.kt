@@ -9,4 +9,8 @@ class GameTree {
     fun endState() {
 
     }
+
+    fun markCurrentStateAsWin(m : Mark) {
+
+    }
 }

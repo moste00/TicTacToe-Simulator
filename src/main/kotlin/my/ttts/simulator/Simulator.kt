@@ -31,6 +31,10 @@ class Simulator(private val playerX : Player,
             gameTree.markCurrentStateAsWin(Mark.O)
             return
         }
+        if (board.isFull) {
+            gameTree.markCurrentStateAsDraw()
+            return
+        }
 
         val currentPlayer = when(m) {
             Mark.X -> playerX

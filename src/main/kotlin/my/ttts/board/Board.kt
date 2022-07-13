@@ -20,15 +20,17 @@ data class Row(val C1 : CellState,
 }
 
 class Board(private val R1 : Row, private val R2 : Row, private val R3 : Row) {
+
     companion object {
-        @JvmStatic
-        val Empty = Board(Row(CellState.Empty,CellState.Empty,CellState.Empty),
-                          Row(CellState.Empty,CellState.Empty,CellState.Empty),
-                          Row(CellState.Empty,CellState.Empty,CellState.Empty))
         @JvmStatic
         val Cells = listOf(CellPosition.UPPER_LEFT ,CellPosition.UPPER_MIDDLE ,CellPosition.UPPER_RIGHT ,
                            CellPosition.MIDDLE_LEFT,CellPosition.MIDDLE_MIDDLE,CellPosition.MIDDLE_RIGHT,
                            CellPosition.LOWER_LEFT ,CellPosition.LOWER_MIDDLE ,CellPosition.LOWER_RIGHT)
+        @JvmStatic
+        val Empty = Board(Row(CellState.Empty,CellState.Empty,CellState.Empty),
+                          Row(CellState.Empty,CellState.Empty,CellState.Empty),
+                          Row(CellState.Empty,CellState.Empty,CellState.Empty))
+
     }
 
     fun fill(pos : CellPosition, newState : CellState) : Board {
@@ -45,11 +47,9 @@ class Board(private val R1 : Row, private val R2 : Row, private val R3 : Row) {
                             R3.fill(newState,i - 6))
             //impossible by definition of toInt
             //The compiler is just not smart enough to prove it
-            else -> error("Impossible Error : Invalid Cell Position")
+            else -> error("Impossible Error : Invalid Cell Position $i")
         }
     }
-
-    val emptyCells = Cells.filter { this[it] == CellState.Empty }
 
     operator fun get(pos : CellPosition) : CellState = when(pos) {
         CellPosition.UPPER_LEFT    -> R1[1]
@@ -63,6 +63,8 @@ class Board(private val R1 : Row, private val R2 : Row, private val R3 : Row) {
         CellPosition.LOWER_RIGHT   -> R3[3]
     }
 
-    fun isEmpty() : Boolean = emptyCells.size == 9
+    val emptyCells = Cells.filter { this[it] == CellState.Empty }
+    val isEmpty = emptyCells.size == 9
+    val isFull  = emptyCells.isEmpty()
 }
 

@@ -4,7 +4,7 @@ import my.ttts.board.Board
 import my.ttts.board.CellPosition
 import my.ttts.board.CellState
 
-class PerfectPlayer(private val m:Mark) : Player {
+class PerfectPlayer(m:Mark) : Player {
     private val me = when(m) {
         Mark.X -> CellState.X
         Mark.O -> CellState.O
@@ -20,7 +20,7 @@ class PerfectPlayer(private val m:Mark) : Player {
     //Optimal Play as described in https://upload.wikimedia.org/wikipedia/commons/d/de/Tictactoe-X.svg
     override fun play(board: Board): List<Board> {
         //Opening move, guaranteed win or draw
-        if (board.isEmpty()) {
+        if (board.isEmpty) {
             hasOpeningMove = true
         }
         return if (hasOpeningMove) playWithOpeningMove(board)

@@ -13,4 +13,8 @@ class GameTree {
     fun markCurrentStateAsWin(m : Mark) {
 
     }
+
+    fun markCurrentStateAsDraw() {
+
+    }
 }

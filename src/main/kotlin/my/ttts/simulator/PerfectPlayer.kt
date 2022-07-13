@@ -4,7 +4,7 @@ import my.ttts.board.Board
 import my.ttts.board.CellPosition
 import my.ttts.board.CellState
 
-class PerfectPlayer(m:Mark) : Player {
+class PerfectPlayer(private val m:Mark) : Player {
     private val me = when(m) {
         Mark.X -> CellState.X
         Mark.O -> CellState.O
@@ -16,6 +16,17 @@ class PerfectPlayer(m:Mark) : Player {
     private var currTurn = 1
     private var hasOpeningMove = false
     private var opponentMoves = ArrayDeque<CellPosition>(3)
+
+    private constructor(m : Mark,
+                        currTurn : Int,
+                        hasOpeningMove : Boolean,
+                        opponentMoves : ArrayDeque<CellPosition>) : this(m) {
+        this.currTurn = currTurn
+        this.hasOpeningMove = hasOpeningMove
+        for (move in opponentMoves) this.opponentMoves.addLast(move)
+    }
+
+    override fun copy() = PerfectPlayer(m,currTurn,hasOpeningMove,opponentMoves)
 
     //Optimal Play as described in https://upload.wikimedia.org/wikipedia/commons/d/de/Tictactoe-X.svg
     override fun play(board: Board): List<Board> {

@@ -9,6 +9,7 @@ class ExhaustivePlayer(m:Mark) : Player {
         Mark.O -> CellState.O
     }
 
+    override fun copy() = this
     //Simply performs every possible move at each turn
     override fun play(board: Board): List<Board> {
         val result = mutableListOf<Board>()

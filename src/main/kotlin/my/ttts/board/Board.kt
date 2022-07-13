@@ -20,8 +20,9 @@ data class Row(val C1 : CellState,
 }
 
 class Board(private val R1 : Row, private val R2 : Row, private val R3 : Row) {
-
     companion object {
+        //The order of those 2 fields is very, very important, the JVM will throw an NPE during initialization of the Board class if the order was reversed.
+        //Do not modify the order of initialization of those 2 fields please.
         @JvmStatic
         val Cells = listOf(CellPosition.UPPER_LEFT ,CellPosition.UPPER_MIDDLE ,CellPosition.UPPER_RIGHT ,
                            CellPosition.MIDDLE_LEFT,CellPosition.MIDDLE_MIDDLE,CellPosition.MIDDLE_RIGHT,
@@ -30,7 +31,6 @@ class Board(private val R1 : Row, private val R2 : Row, private val R3 : Row) {
         val Empty = Board(Row(CellState.Empty,CellState.Empty,CellState.Empty),
                           Row(CellState.Empty,CellState.Empty,CellState.Empty),
                           Row(CellState.Empty,CellState.Empty,CellState.Empty))
-
     }
 
     fun fill(pos : CellPosition, newState : CellState) : Board {

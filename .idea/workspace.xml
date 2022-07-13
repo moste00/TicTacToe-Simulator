@@ -9,8 +9,8 @@
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/my/ttts/board/Board.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/my/ttts/board/Board.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/my/ttts/entry/main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/my/ttts/entry/main.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/my/ttts/simulator/ExhaustivePlayer.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/my/ttts/simulator/ExhaustivePlayer.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/my/ttts/simulator/GameTree.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/my/ttts/simulator/GameTree.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/my/ttts/simulator/PerfectPlayer.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/my/ttts/simulator/PerfectPlayer.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/my/ttts/simulator/Player.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/my/ttts/simulator/Player.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/my/ttts/simulator/Simulator.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/my/ttts/simulator/Simulator.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -127,7 +127,14 @@
       <option name="project" value="LOCAL" />
       <updated>1657679263367</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="&quot;first&quot;">
+      <created>1657744724898</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1657744724898</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -152,6 +159,16 @@
           <properties class="java.lang.NullPointerException" package="java.lang" />
           <option name="timeStamp" value="1" />
         </breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/src/main/kotlin/my/ttts/simulator/PerfectPlayer.kt</url>
+          <line>64</line>
+          <option name="timeStamp" value="15" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/src/main/kotlin/my/ttts/entry/main.kt</url>
+          <line>17</line>
+          <option name="timeStamp" value="18" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
     <pin-to-top-manager>

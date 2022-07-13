@@ -18,11 +18,11 @@ class Simulator(private val playerX : Player,
     fun simulate(m : Mark) {
         val startingBoard = Board.Empty
         gameTree.beginState(startingBoard)
-        continueSimulation(startingBoard,m)
+        continueSimulation(startingBoard,m,playerX,playerO)
         gameTree.endState()
     }
 
-    private fun continueSimulation(board : Board, m : Mark) {
+    private fun continueSimulation(board : Board, m : Mark,playerX : Player, playerO : Player) {
         if (win(board,Mark.X)) {
             gameTree.markCurrentStateAsWin(Mark.X)
             return
@@ -45,7 +45,7 @@ class Simulator(private val playerX : Player,
 
         for (s in newStates) {
             gameTree.beginState(s)
-            continueSimulation(s,!m)
+            continueSimulation(s,!m,playerX.copy(), playerO.copy())
             gameTree.endState()
         }
     }

@@ -6,12 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="4c74e346-5892-478d-bb8c-22b169f79a7e" name="Changes" comment="&quot;first&quot;">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/my/ttts/board/Board.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/my/ttts/board/Board.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/my/ttts/entry/main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/my/ttts/entry/main.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/my/ttts/simulator/ExhaustivePlayer.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/my/ttts/simulator/ExhaustivePlayer.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/my/ttts/simulator/PerfectPlayer.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/my/ttts/simulator/PerfectPlayer.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/my/ttts/simulator/Player.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/my/ttts/simulator/Player.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/my/ttts/simulator/Simulator.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/my/ttts/simulator/Simulator.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/my/ttts/simulator/GameTree.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/my/ttts/simulator/GameTree.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -134,7 +130,14 @@
       <option name="project" value="LOCAL" />
       <updated>1657744724898</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="&quot;first&quot;">
+      <created>1657752648128</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1657752648128</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -160,14 +163,9 @@
           <option name="timeStamp" value="1" />
         </breakpoint>
         <line-breakpoint enabled="true" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/src/main/kotlin/my/ttts/simulator/PerfectPlayer.kt</url>
-          <line>64</line>
-          <option name="timeStamp" value="15" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="kotlin-line">
           <url>file://$PROJECT_DIR$/src/main/kotlin/my/ttts/entry/main.kt</url>
-          <line>17</line>
-          <option name="timeStamp" value="18" />
+          <line>13</line>
+          <option name="timeStamp" value="9" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -176,5 +174,10 @@
         <PinnedItemInfo parentTag="java.lang.ExceptionInInitializerError" memberName="backtrace" />
       </pinned-members>
     </pin-to-top-manager>
+    <watches-manager>
+      <configuration name="JetRunConfigurationType">
+        <watch expression="board" />
+      </configuration>
+    </watches-manager>
   </component>
 </project>
